@@ -136,7 +136,7 @@ html {
 @media(max-width:900px) {
     .header__nav ul {
         position: absolute;
-        top: -95%;
+        top: -110%;
         left: 0;
         display: inline-block;
         background-color: #283645;
@@ -168,7 +168,7 @@ html {
     }
 
     .list.list--activ {
-        top: -16%;
+        top: -21%;
     }
 
     .disabel {
