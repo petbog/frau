@@ -1,0 +1,21 @@
+.kitchen__price {
+    padding: 0 0 0 10px;
+}
+
+.header_img-vine {
+    background-image: url(/img/ac44014ddfb459fae6e44f3a7a8e9d29.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+
+}
+
+@media(max-width:411px) {
+    .header_img-vine {
+        background-image: url(/img/1645088867_5-phonoteka-org-p-bokal-vina-fon-6.jpg);
+        background-size: 250% 100%;
+    }
+
+
+}

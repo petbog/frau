@@ -1,0 +1,20 @@
+.header_img-bar {
+    background-image: url(/img/62215379-viski.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+
+}
+@media(max-width:482px) {
+    .header_img-bar {
+        background-image: url(/img/splash-glass-whiskey-ice-2019611.jpg);
+        background-size: cover;
+    }
+}
+@media(max-width:417px) {
+    .header_img-bar {
+        background-image: url(/img/splash-glass-whiskey-ice-2019611.jpg);
+        background-size: 170% 100%;
+    }
+}
