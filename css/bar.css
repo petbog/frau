@@ -6,15 +6,17 @@
     max-width: 100%;
 
 }
+
 @media(max-width:482px) {
     .header_img-bar {
-        background-image: url(/img/splash-glass-whiskey-ice-2019611.jpg);
-        background-size: cover;
+        background-image: url(/img/1633827369_50-pro-dachnikov-com-p-stakan-viski-so-ldom-foto-58\ \(1\).jpg);
+        background-size: 109% 100%;
     }
 }
-@media(max-width:417px) {
+
+@media(max-width:345px) {
     .header_img-bar {
-        background-image: url(/img/splash-glass-whiskey-ice-2019611.jpg);
-        background-size: 170% 100%;
+        background-image: url(/img/1633827369_50-pro-dachnikov-com-p-stakan-viski-so-ldom-foto-58\ \(1\).jpg);
+        background-size: 141% 100%;
     }
 }
