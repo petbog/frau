@@ -1,5 +1,5 @@
 .header_img-form {
-    background-image: url(/img/26c9d579-95bb-438e-85a0-16fe562d4630.jfif);
+    background-image: url(/img/26c9d579-95bb-438e-85a0-16fe562d4630.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -14,7 +14,7 @@
 }
 @media(max-width:417px) {
     .header_img-form {
-        background-image: url(/img/dddd.jfif);
+        background-image: url(/img/dddd.jpg);
         background-size: 127% 100%;
     }
 }

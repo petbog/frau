@@ -13,6 +13,7 @@
   <link rel="mask-icon" href="/favIco/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -52,7 +53,7 @@
   <div class="img_container">
     <header class="header__top">
       <div class="container">
-        <div class="info">
+        <div data-wow-duration="2s" class="info animate__animated wow  animate__fadeInRight">
           <div class="info__title">
             <h1 class=""><a id="bottom"></a>Добро пожаловать в ресторан Фрау Мюллер!</h1>
           </div>
@@ -85,18 +86,18 @@
             </ul>
           </div>
         </div>
-        <div class="slider__decor">
+        <div data-wow-duration="2s" class="slider__decor animate__animated wow  animate__fadeInLeft">
           <div class="slider__item">
-            <img src="./img/sl1-1.jpg" alt="" class="">
+            <img src="./img/sl1-1 (1).jpg" alt="" class="">
           </div>
           <div class="slider__item">
-            <img src="./img/sl1-2.jpg" alt="" class="">
+            <img src="./img/sl1-2 (1).jpg" alt="" class="">
           </div>
           <div class="slider__item">
-            <img src="./img/sl1-3.jpg" alt="" class="">
+            <img src="./img/sl1-3 (1).jpg" alt="" class="">
           </div>
           <div class="slider__item">
-            <img src="./img/sl1-4.jpg" alt="" class="">
+            <img src="./img/sl1-4 (1).jpg" alt="" class="">
           </div>
           <div class="slider__item">
             <img src="./img/sl1-5.jpg" alt="" class="">
@@ -104,11 +105,11 @@
         </div>
         <section class="">
           <div class="menu">
-            <div class="menu__title">
+            <div  data-wow-duration="2s" class="menu__title animate__animated wow  animate__fadeInUp ">
               <p>Меню ресторана Фрау Мюллер</p>
             </div>
             <div class="preloader">
-              <div class="preloader_text">
+              <div data-wow-delay="0.5s" class="preloader_text animate__animated wow  animate__fadeInLeft">
                 Семнадцать лет назад на набережной р. Дон радушно открыл свои двери ресторан «Фрау Мюллер».
                 <br>Гости могут насладиться отличной кухней, прекрасными видами, открывающимися с летней террасы за
                 окнами ресторана.
@@ -116,12 +117,12 @@
                 европейские
                 десерты.
               </div>
-              <div class="preloader_img">
+              <div data-wow-delay="0.5s" class="preloader_img animate__animated wow  animate__fadeInRight">
                 <img src="./img/chef.jpg" alt="" class="">
               </div>
             </div>
             <div class="menu_description">
-              <div class="menu_description-box">
+              <div data-wow-duration="2s" class="menu_description-box animate__animated wow  animate__fadeInUp ">
                 <p class="menu_description-text">
                   Расположившись в уютном зале, обратите внимание на предложенное Вам меню, в меню преобладают блюда
                   европейской кухни, так как сочетают в себе натуральный вкус ингредиентов и умеренное количество
@@ -132,7 +133,7 @@
                   ингредиентом меню ресторана «Фрау Мюллер».</p>
               </div>
             </div>
-            <div class="slider__menu">
+            <div data-wow-duration="2s" class="slider__menu animate__animated wow  animate__fadeInUp ">
               <div class="menu__slider_img">
                 <div class="menu__slider_img-box">
                   <img src="/img/menu/1.jpg" alt="">
@@ -175,7 +176,7 @@
   <footer>
     <div class="footer">
       <div class="footer_location">
-       <a href="#"> <img src="./img/logo.svg" alt="" class="footer_img"></a>
+        <a href="#"> <img src="./img/logo.svg" alt="" class="footer_img"></a>
         <div class="footer__location-text">
           <p class="footer_location-location">МЫ НАХОДИМСЯ ПО АДРЕСУ</p><br>
           <p class="footer_location-address">Ростов-на-Дону, ул. Береговая 29а</p>
@@ -196,6 +197,11 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/slider.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 
 </html>
