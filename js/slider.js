@@ -4,7 +4,7 @@ $(document).ready(function(){
         dots:true,
         slidesToShow:1,
         speed:1000,
-        autoplay:false,
+        autoplay:true,
         autoplaySpeed:3000,
         responsive:[
           {
@@ -21,7 +21,7 @@ $(document).ready(function(){
         arrows:true,
         slidesToShow:3,
         speed:1000,
-        autoplay:false,
+        autoplay:true,
         autoplaySpeed:3000,
         centerMode: true,
         responsive:[
