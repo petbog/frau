@@ -10,20 +10,20 @@ $('.telegram-form').on('submit', function (event) {
 
 
     $('.submit', form).val('Отправка...');
-    $('input, textarea', form).attr('disabled', '');
+    $('input, textarea', form).attr('disabled','');
 
-    data.append('name', $('[name="name"]', form).val());
-    data.append('numberofpeople', $('[name="numberofpeople"]', form).val());
-    data.append('data', $('[name="data"]', form).val());
-    data.append('timetopiople', $('[name="timetopiople"]', form).val());
-    data.append('telephonetopiople', $('[name="telephonetopiople"]', form).val());
+    data.append( 'user_name', 		$('[name="user_name"]', form).val() );
+    data.append( 'user_number', 		$('[name="user_number"]', form).val() );
+    data.append( 'user_data', 		$('[name="user_data"]', form).val() );
+    data.append( 'user_time', 		$('[name="user_time"]', form).val() );
+    data.append( 'user_phone', 		$('[name="user_phone"]', form).val() );
 
 
     files.each(function (key, file) {
         let cont = file.files;
-        if (cont) {
-            $.each(cont, function (key, value) {
-                data.append(key, value);
+        if ( cont ) {
+            $.each( cont, function( key, value ) {
+                data.append( key, value );
             });
         }
     });
@@ -36,29 +36,29 @@ $('.telegram-form').on('submit', function (event) {
         dataType: 'json',
         processData: false,
         contentType: false,
-        xhr: function () {
+        xhr: function() {
             let myXhr = $.ajaxSettings.xhr();
 
-            if (myXhr.upload) {
-                myXhr.upload.addEventListener('progress', function (e) {
-                    if (e.lengthComputable) {
-                        let percentage = (e.loaded / e.total) * 100;
-                        percentage = percentage.toFixed(0);
+            if ( myXhr.upload ) {
+                myXhr.upload.addEventListener( 'progress', function(e) {
+                    if ( e.lengthComputable ) {
+                        let percentage = ( e.loaded / e.total ) * 100;
+                            percentage = percentage.toFixed(0);
                         $('.submit', form)
-                            .html(percentage + '%');
+                            .html( percentage + '%' );
                     }
-                }, false);
+                }, false );
             }
 
             return myXhr;
         },
-        error: function (jqXHR, textStatus) {
+        error: function( jqXHR, textStatus ) {
             // Тут выводим ошибку
         },
-        complete: function () {
+        complete: function() {
             // Тут можем что-то делать ПОСЛЕ успешной отправки формы
             console.log('Complete')
-            form.reset()
+            form.reset() 
         }
     });
 
