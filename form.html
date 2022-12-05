@@ -53,31 +53,40 @@
     <div class="kitchen">
       <div class="form-wrapper">
         <h1 class="form_title">Забронировать</h1>
-        <form action="./js/telegram.php" method="POST">
+        <form>
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="Фрау-Мюллер">
+          <input type="hidden" name="admin_email" value="bogdan_emdetei_petrov@mail.ru">
+          <input type="hidden" name="form_subject" value="Form header">
+          <!-- END Hidden Required Fields -->
+
           <div class="form-item">
             <label for="text"></label>
-            <input type="text" name="user_name" required="required" placeholder="Ваше имя" required ></input>
+            <input type="text" name="user_name" required="required" placeholder="Ваше имя" required></input>
           </div>
           <div class="form-item">
             <label for="number"></label>
-            <input type="number" name="user_number" required="required" placeholder="Колличество гостей" required ></input>
+            <input type="number" name="user_number" required="required" placeholder="Колличество гостей"
+              required></input>
           </div>
           <div class="form-item">
             <label for="text"></label>
-            <input type="date" min="2022-12-03" max="2024-12-03" name="user_data" required="required" placeholder="Дата" required ></input>
+            <input type="date" min="2022-12-03" max="2024-12-03" name="user_data" required="required" placeholder="Дата"
+              required></input>
           </div>
           <div class="form-item">
             <label for="time"></label>
-            <input type="time" name="user_time" required="required" min="12:00" max="00:00" placeholder="Время" required ></input>
+            <input type="time" name="user_time" required="required" min="12:00" max="00:00" placeholder="Время"
+              required></input>
           </div>
           <div class="form-item">
             <label for="tel"></label>
-            <input type="tel" name="user_phone" required="required" placeholder="телефон" required ></input>
+            <input type="tel" name="user_phone" required="required" placeholder="телефон" required></input>
           </div>
           <div class="button-panel">
             <input type="submit" class="button" title="Отправить" value="Отправить"></input>
           </div>
-          
+
         </form>
 
       </div>
@@ -104,9 +113,11 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   <script src="./js/slick.min.js"></script>
   <script src="./js/slider.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

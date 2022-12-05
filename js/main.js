@@ -1,66 +1,20 @@
-$('.telegram-form').on('submit', function (event) {
+$(document).ready(function() {
 
-    event.stopPropagation();
-    event.preventDefault();
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Thank you!");
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
 
-    let form = this,
-        submit = $('.submit', form),
-        data = new FormData(),
-        files = $('input[type=file]')
-
-
-    $('.submit', form).val('Отправка...');
-    $('input, textarea', form).attr('disabled','');
-
-    data.append( 'user_name', 		$('[name="user_name"]', form).val() );
-    data.append( 'user_number', 		$('[name="user_number"]', form).val() );
-    data.append( 'user_data', 		$('[name="user_data"]', form).val() );
-    data.append( 'user_time', 		$('[name="user_time"]', form).val() );
-    data.append( 'user_phone', 		$('[name="user_phone"]', form).val() );
-
-
-    files.each(function (key, file) {
-        let cont = file.files;
-        if ( cont ) {
-            $.each( cont, function( key, value ) {
-                data.append( key, value );
-            });
-        }
-    });
-
-    $.ajax({
-        url: 'ajax.php',
-        type: 'POST',
-        data: data,
-        cache: false,
-        dataType: 'json',
-        processData: false,
-        contentType: false,
-        xhr: function() {
-            let myXhr = $.ajaxSettings.xhr();
-
-            if ( myXhr.upload ) {
-                myXhr.upload.addEventListener( 'progress', function(e) {
-                    if ( e.lengthComputable ) {
-                        let percentage = ( e.loaded / e.total ) * 100;
-                            percentage = percentage.toFixed(0);
-                        $('.submit', form)
-                            .html( percentage + '%' );
-                    }
-                }, false );
-            }
-
-            return myXhr;
-        },
-        error: function( jqXHR, textStatus ) {
-            // Тут выводим ошибку
-        },
-        complete: function() {
-            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Complete')
-            form.reset() 
-        }
-    });
-
-    return false;
 });
