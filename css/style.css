@@ -732,9 +732,10 @@ html {
 }
 
 .footer_location-location {
-    font-size: 15px;
+    font-size: 21px;
     line-height: 5px;
     color: #808080;
+    letter-spacing: 1.2px;
 }
 
 .footer_location-address {
@@ -803,7 +804,7 @@ html {
     }
 
     .footer_location-location {
-        font-size: 13px;
+        font-size: 18px;
         line-height: 5px;
         color: #808080;
     }
@@ -876,7 +877,7 @@ html {
     }
 
     .footer_location-location {
-        font-size: 11px;
+        font-size: 15px;
         line-height: 5px;
         color: #808080;
     }
