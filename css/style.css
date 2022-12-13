@@ -594,7 +594,7 @@ html {
     }
 
     .menu__slider_img-box img {
-        height: 174px;
+        height: 152px;
     }
 
     .slick-list {
@@ -732,7 +732,7 @@ html {
 }
 
 .footer_location-location {
-    font-size: 21px;
+    font-size: 16px;
     line-height: 5px;
     color: #808080;
     letter-spacing: 1.2px;
@@ -804,7 +804,7 @@ html {
     }
 
     .footer_location-location {
-        font-size: 18px;
+        font-size: 13px;
         line-height: 5px;
         color: #808080;
     }
@@ -877,7 +877,7 @@ html {
     }
 
     .footer_location-location {
-        font-size: 15px;
+        font-size: 11px;
         line-height: 5px;
         color: #808080;
     }
